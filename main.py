@@ -29,6 +29,7 @@ print("Perímetro del Rectángulo 3: " + str(obj_rect_3.perimetro())+ " [cm]")
 print("Área del Rectángulo 3: " + str(obj_rect_3.area())+ " [cm^2]")
 print ("")
 
-obj_poly: poligono (4)
+
+
 
 
