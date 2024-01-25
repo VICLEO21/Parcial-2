@@ -31,3 +31,4 @@ except TypeError:
     print ("No puedes dividir strings entre Números")
 except Exception as e:
     print (f"Error desconocido: {e} ")
+print ("Puros Corridos tumbados")
