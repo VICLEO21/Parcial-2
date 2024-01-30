@@ -1,35 +1,35 @@
 from lib import *
 
-hw ()
-print ("")
-
-obj_rect = rectangulo (12,4)
-print (obj_rect)
-print ("Ancho del Rectángulo 1: " +str(obj_rect.ancho)+ " [cm]")
-print ("Largo del Rectángulo 1: " +str(obj_rect.largo)+ " [cm]")
-print("Perímetro del Rectángulo 1: " + str(obj_rect.perimetro())+ " [cm]")
-print("Área del Rectángulo 1: " + str(obj_rect.area())+ " [cm^2]")
-print ("")
-
-obj_rect_2 = rectangulo (50,20)
-print (obj_rect_2)
-print ("Ancho del Rectángulo 2: " +str(obj_rect_2.ancho)+ " [cm]")
-print ("Largo del Rectángulo 2: " +str(obj_rect_2.largo)+ " [cm]")
-print("Perímetro del Rectángulo 2: " + str(obj_rect_2.perimetro())+ " [cm]")
-print("Área del Rectángulo 2: " + str(obj_rect_2.area())+ " [cm^2]")
-print("")
-
-obj_rect_3 = rectangulo (0,0)
-obj_rect_3.ancho =88
-obj_rect_3.largo =44
-print (obj_rect_3)
-print ("Ancho del Rectángulo 3: " +str(obj_rect_3.ancho)+ " [cm]")
-print ("Largo del Rectángulo 3: " +str(obj_rect_3.largo)+ " [cm]")
-print("Perímetro del Rectángulo 3: " + str(obj_rect_3.perimetro())+ " [cm]")
-print("Área del Rectángulo 3: " + str(obj_rect_3.area())+ " [cm^2]")
-print ("")
 
 
+obj_poly_1 = Poligono(10,18)
+print(obj_poly_1)
+"""print(f"Num lados: {obj_poly_1.numLado }")"""
+print(obj_poly_1.nomPoly())
+print(obj_poly_1.periPoly())
 
+obj_poly_2 = PoligonoRegular(5,20,2)
+print(obj_poly_2)
+print(obj_poly_2.nomPoly())
+print(obj_poly_2.periPoly())
 
+#print (obj_poly_2.getArea ())
+#print (obj_poly_2.chkArea ())
 
+obj_poly_2.setColor ("Verde Vejiga")
+
+print (obj_poly_2.setColor)
+
+num1 = 10
+num2 = 0
+
+try:
+    div: num1/num2
+except ZeroDivisionError:
+    print ("No puedes dividir entre cero...")
+except TypeError:
+    print ("No puedes dividir strings entre Números")
+except Exception as e:
+    print (f"Error desconocido: {e} ")
+    
+print ("Puros Corridos tumbados")
