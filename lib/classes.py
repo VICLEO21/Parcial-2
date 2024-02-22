@@ -9,9 +9,10 @@ class nodo():
         strOut = " "
         strOut += f"NodoPadre [{self.valor}]"
         if type(self.izq) != type(None):
-            strOut += f" [{self.valor}]->[{self.izq}] "
+            strOut += f" - Izquierda [{self.valor}]->[{self.izq}] "
+            
         if self.der is not None:
-            strOut += f" [{self.valor}]->[{self.der}] "
+            strOut += f" - Derecha [{self.valor}]->[{self.der}] "
         
         return strOut 
     
