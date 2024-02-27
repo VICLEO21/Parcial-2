@@ -6,7 +6,6 @@ def linkHijo(nodoPadre,nodoHijoIzq=None,nodoHijoDer=None):
     if nodoHijoDer is not None:
         nodoPadre.der = nodoHijoDer
     pass
-    
 
 
 def LVR (nodo,InOrderArr): #Left Visit Right (In Order)
@@ -23,6 +22,33 @@ def LVR (nodo,InOrderArr): #Left Visit Right (In Order)
 
     return InOrderArr
 
+
+def VLR(Nodo, PreOrderArr):  #Visit Left Right (Pre Order)
+    if Nodo is not None:
+        nodoPadre = Nodo
+        PreOrderArr.append(nodoPadre.valor)
+        LVR(nodoPadre.izq, PreOrderArr)        
+        LVR(nodoPadre.der, PreOrderArr)
+    else:
+        pass
+
+    return PreOrderArr
+
+
+
+
+def LRV(Nodo, PostOrderArr): #Left Right Visit (Post Order)
+    if Nodo is not None:
+        nodoPadre = Nodo
+        LVR(nodoPadre.izq, PostOrderArr)        
+        LVR(nodoPadre.der, PostOrderArr)
+        PostOrderArr.append(nodoPadre.valor)        
+    else:
+        pass
+
+    return PostOrderArr
+
+
 def printArbol (nodo): 
     if nodo is not None:
         nodoPadre = nodo
@@ -31,34 +57,6 @@ def printArbol (nodo):
         printArbol (nodoPadre.der)
        
         return 0
-       
-
-#def VLR (nodo,PreOrderArr): #Visit Left Right (Pre Order)
-#    if nodo is not None:
-        nodoPadre = nodo
-        PreOrderArr.append(nodoPadre.valor)
-        VLR (nodoPadre.izq,PreOrderArr)
-        VLR (nodoPadre.der,PreOrderArr)
-        return PreOrderArr
-    
- #   else:
-        pass 
-
-#    return PreOrderArr
-
-#def LRV (nodo,PostOrderArr): #Left Right Visit (Post Order)
-#    if nodo is not None:
-        nodoPadre = nodo
-        LRV (nodoPadre.der,PostOrderArr)
-        LRV (nodoPadre.izq,PostOrderArr)
-        PostOrderArr.append(nodoPadre.valor)
-        return PostOrderArr
-    
-#    else:
-        pass 
-    
-#    return PostOrderArr
-
 
 def nodosOrdenados (nodoPadre, newNodo):
     if newNodo.valor < nodoPadre.valor : #Izquierda

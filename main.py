@@ -24,12 +24,13 @@ LVR(nodo1,InOrderArr)
 print ("In order:")
 print (InOrderArr)
 
-#VLR(nodo1,InOrderArr)
-#print (PreOrderArr)
+VLR(nodo1,PreOrderArr)
+print ("Pre order:")
+print (PreOrderArr)
 
-
-#LRV(nodo1,InOrderArr)
-#print (PostOrderArr)
+LRV(nodo1,PostOrderArr)
+print ("Post order:")
+print (PostOrderArr)
 
 #print(nodo1.getArbol())
 
