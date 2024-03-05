@@ -1,5 +1,32 @@
 from lib import *
 
+arrNum =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+nodoRaiz = nodo (arrNum[0])
+
+cola = []
+cola.append (nodoRaiz)
+
+def agregaNodos (nodoRaiz):
+
+    currentNodo = cola.pop()
+
+    if currentNodo.izq is None:
+        currentNodo.izq = nodo (arrNum[i])
+        return 0
+    
+    if currentNodo.der is None:
+        currentNodo.der = nodo (arrNum[i])
+        return 0
+    
+    cola.append (currentNodo.izq)
+    cola.append (currentNodo.der)
+
+    agregaNodos (currentNodo, )
+    return 0
+
+print ("-----")
+
 InOrderArr=[]
 PreOrderArr=[]
 PostOrderArr=[]
@@ -32,7 +59,6 @@ LRV(nodo1,PostOrderArr)
 print ("Post order:")
 print (PostOrderArr)
 
-#print(nodo1.getArbol())
 
 print("-----------------------------------------------------------------------------------------------------------------------")
 
@@ -74,10 +100,11 @@ print("-------------------------------------------------------------------------
 
 
 print("-----------------------------------------------------------------------------------------------------------------------")
-
+# Arbol ordenado
 # Manera Dinámica
 nodoRaiz = None
 arrNodos = [16,5,7,12,9,20,18,3,10,14]
+
 
 for i in range (0, len(arrNodos), 1):
     if i == 0:
