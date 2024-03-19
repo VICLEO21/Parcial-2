@@ -1,4 +1,3 @@
-from .classes   import *
-from .func import *
-
+from .myfunc import *
+from .classes import *
 
